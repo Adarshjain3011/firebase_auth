@@ -104,49 +104,6 @@ const SignupForm: React.FC<any> = () => {
 
     const handleGoogleSignIn = async () => {
 
-        //     try {
-
-        //       const result = await signInWithPopup(auth, googleProvider);
-
-        //       const user = result.user;
-
-        //       if (user) {
-
-        //         console.log(`User signed in with Google: ${user.uid}`);
-
-        //         const userRef = doc(firestore, "users", user.uid);
-        //         const userDoc = await getDoc(userRef);
-
-        //         if (userDoc.exists()) {
-
-        //           console.log("User already exists in Firestore");
-        //           toast.error("This email is already registered");
-
-        //         } else {
-
-        //           console.log("Creating new user document in Firestore...");
-        //           await setDoc(userRef, {
-        //             displayName: user.displayName,
-        //             email: user.email,
-        //             // Add any other user data you want to store
-        //           });
-        //           console.log("New user document created in Firestore");
-        //           toast.success("You are signed up successfully!");
-
-        //           // Redirect to homepage after sign-up
-
-        //           router.push("/homepage");
-        //         }
-        //       }
-        //     } catch (error:any) {
-
-        //       console.error(`Error in handleGoogleSignIn: ${error.message}`);
-        //       toast.error("Failed to sign in with Google. Please try again.");
-
-        //     }
-        //   };
-
-
         try {
 
             // Sign in with a pop-up window
