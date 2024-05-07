@@ -169,24 +169,31 @@ const SignupForm: React.FC<any> = () => {
 
             const errorMessage = err.message;
             const errorCode = err.code;
-            
+
             toast.error(errorMessage);
 
         }
     }
 
-    
+
 
 
     return (
 
-        <div className=' relative min-h-screen w-full bg-[#0a1324] flex flex-col m-auto'>
+        <div className=' relative min-h-screen w-full bg-dark-blue sm:bg-[#0a1324] flex flex-col m-auto'>
+            <div className='w-full flex  absolute top-[-15%] sm:relative flex-col justify-center items-center'>
+                <h1 className="text-white font-bold sm:hidden block">
 
-            <h1 className='pl-9 pt-5 text-center'>Journey to a trillion miles starts from here!!</h1>
+                    LO <span className="bg-light-blue p-1 rounded-md">Go</span>
+                </h1>
+                <h1 className='pl-9 pt-5   text-sm sm:text-base text-center'>Journey to a trillion miles starts from here!!</h1>
+
+            </div>
+
 
             {
 
-                !click && <div className=' relative w-full h-full flex flex-col justify-center items-center gap-14 mt-32 '>
+                !click && <div className=' relative w-full h-full flex flex-col justify-center items-center gap-8 sm:gap-14 mt-10 sm:mt-32 '>
 
                     <div className='flex flex-col gap-3'>
 

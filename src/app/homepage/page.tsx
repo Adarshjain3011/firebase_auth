@@ -18,7 +18,7 @@ export default function HomePage() {
         if (scrollContainerRef.current) {
 
             const container = scrollContainerRef.current;
-            container.scrollLeft -= container.clientWidth; 
+            container.scrollLeft -= container.clientWidth;
 
         }
     };
@@ -28,7 +28,7 @@ export default function HomePage() {
         if (scrollContainerRef.current) {
 
             const container = scrollContainerRef.current;
-            container.scrollLeft += container.clientWidth; 
+            container.scrollLeft += container.clientWidth;
         }
     };
 
@@ -41,25 +41,25 @@ export default function HomePage() {
 
             scrollContainerRef.current.scrollLeft = 0;
         }
-    }, []); 
+    }, []);
 
     return (
 
-        <div className="min-h-screen w-full bg-dark-blue flex flex-col ">
+        <div className="min-h-screen w-full justify-start items-center bg-dark-blue flex flex-col ">
 
             <NavBar />
 
-            <div className="relative flex flex-col justify-center mx-auto mt-4">
+            <div className="relative flex w-11/12 flex-col justify-center mx-auto mt-4">
 
 
-                <div className="flex flex-col gap-2 w-[1120px]">
+                <div className="flex flex-col gap-2 w-full">
 
 
-                    <div className="flex justify-between overflow-hidden p-3">
+                    <div className="flex justify-between overflow-hidden p-3 w-full">
 
                         <h1 className="text-white font-bold">Popular Topics 🔥</h1>
 
-                        <div className="flex justify-center items-center gap-4">
+                        <div className=" justify-center items-center gap-4 hidden sm:flex">
 
                             {/* Left arrow button */}
                             <ArrowButton icon={FaArrowLeft} onClick={handleScrollLeft} />
@@ -73,11 +73,7 @@ export default function HomePage() {
 
                     <div
                         ref={scrollContainerRef}
-
-                        className="flex justify-start gap-4 overflow-x-auto no-scrollbar mt-3"
-
-                        style={{ scrollBehavior: "smooth" }}
-                    >
+                        className="flex relative justify-start gap-4 no-scrollbar mt-3 scroll-smooth overflow-x-scroll w-full"                    >
                         {data.map((item, index) => (
 
                             <Card
@@ -89,9 +85,7 @@ export default function HomePage() {
                         ))}
                     </div>
                 </div>
-
             </div>
-
         </div>
     );
 }

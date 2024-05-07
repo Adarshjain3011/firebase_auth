@@ -9,24 +9,14 @@ import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyAFOjbYyTSiO8yoth9SydscOxq4dGMaDV4",
-  authDomain: "nextauth-3535b.firebaseapp.com",
-  databaseURL: "https://nextauth-3535b-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "nextauth-3535b",
-  storageBucket: "nextauth-3535b.appspot.com",
-  messagingSenderId: "583019527269",
-  appId: "1:583019527269:web:81692d8d2c7d15bb38da8c",
-  measurementId: "G-P98004DY3D"
-  
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_MEASUREMENT_ID
 };
-
-// NEXT_PUBLIC_FIREBASE_API_KEY=AIzaSyAFOjbYyTSiO8yoth9SydscOxq4dGMaDV4
-// NEXT_PUBLIC_AUTH_DOMAIN=nextauth-3535b.firebaseapp.com
-// NEXT_PUBLIC_PROJECT_ID=nextauth-3535b
-// NEXT_PUBLIC_STORAGE_BUCKET=nextauth-3535b.appspot.com
-// NEXT_PUBLIC_MESSAGING_SENDER_ID=583019527269
-// NEXT_PUBLIC_APP_ID=1:583019527269:web:81692d8d2c7d15bb38da8c
-// NEXT_PUBLIC_MEASUREMENT_ID=G-3449VB5SED
 
 
 // Initialize Firebase

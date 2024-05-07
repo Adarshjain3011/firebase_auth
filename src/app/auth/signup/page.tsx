@@ -13,15 +13,15 @@ const SignupPage: React.FC = () => {
 
     <div className="min-h-screen w-screen bg-gray-100 overflow-y-hidden mx-auto">
 
-      <div className='flex relative w-full h-full overflow-y-hidden'>
+      <div className='flex relative flex-col sm:flex-row w-full h-full overflow-y-hidden'>
 
-        <div className='relative w-[50%] h-full overflow-hidden'>
+        <div className='relative w-full sm:h-screen h-[400px] overflow-hidden'>
 
-          <Image src={image1} alt="" className='bg-cover w-full min-h-screen' />
+          <Image src={image1} alt="" fill />
 
         </div>
 
-        <div className='relative w-[50%] h-full'>
+        <div className='relative w-full h-full'>
 
           <SignupForm />
 

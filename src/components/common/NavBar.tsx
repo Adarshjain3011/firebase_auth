@@ -30,7 +30,7 @@ export default function Header() {
 
     <div className="relative w-full border-b-2 border-darker-blue">
 
-      <div className="flex justify-between items-center   p-3 w-[1120px] mx-auto">
+      <div className="flex justify-between items-center p-3 w-11/12 mx-auto">
 
         <div>
 
